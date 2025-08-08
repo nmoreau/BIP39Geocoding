@@ -11,6 +11,8 @@ Design inspired by: [ChatGPT Canvas discussion](https://chatgpt.com/canvas/share
 
 Encode any GPS coordinate into **exactly 4 words** from a **BIP‑39** wordlist. Works offline and is fully reversible. UI is a **stand‑alone web page**: user enters **latitude/longitude** and gets the **4‑word code**; user can also paste **4 words** to recover a coordinate. **Words may repeat.**
 
+Disclamer : this is a very naive implemetation aiming to demonstrate the feasibility.
+
 ---
 
 ## 2) Requirements

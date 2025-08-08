@@ -88,15 +88,7 @@ function onReady() {
       performSearch();
     }
   });
-
-  $('useCoordsBtn').addEventListener('click', () => {
-    const text = coordsPaste.value.trim();
-    const m = text.match(/(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)/);
-    if (!m) { coordsPaste.value = 'Could not parse coordinates'; return; }
-    lat.value = m[1];
-    lon.value = m[2];
-  });
-
+  
 
   $('encodeBtn').addEventListener('click', () => {
     try {
