@@ -69,9 +69,9 @@ Encode any GPS coordinate into **exactly 4 words** from a **BIP‑39** wordlist.
 * **Encode panel:** inputs for **lat** and **lon**, language selector, “Encode” button. Outputs: 4‑word code, digits, CRC‑4, `ix`, `iy`.
 * **Decode panel:** input for **4 words** and language; on submit, shows **lat/lon** of the decoded cell center.
 * **Utilities:** copy button for the 4‑word code; optional permalink `?w=...&lang=...`.
-*
 
 
+![Sample design](/assets/BIP-39%20Geocoding.png)
 ---
 
 ## Install (library)
