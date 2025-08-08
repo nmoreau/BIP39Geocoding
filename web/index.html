@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIP-39 Geocoding</title>
+    <style>
+      body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; margin: 2rem; }
+      input, button { font-size: 1rem; padding: 0.5rem 0.75rem; }
+      .row { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+      .card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
+      .muted { color: #666; }
+      code { background: #f5f5f5; padding: 0.125rem 0.25rem; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <h2>BIP-39 4-word Geocoding</h2>
+    <div class="card">
+      <h3>Location helper</h3>
+      <div class="row">
+        <input id="locQuery" style="flex: 1" placeholder="type a place name or address (e.g., Eiffel Tower)" />
+        <button id="openGoogleBtn">Search GPS coordinates</button>
+      </div>
+      <div class="row">
+        <span id="locStatus" class="muted"></span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Encode</h3>
+      <div class="row">
+        <input id="lat" placeholder="lat (e.g., 37.7749)" />
+        <input id="lon" placeholder="lon (e.g., -122.4194)" />
+        <button id="encodeBtn">Encode → 4 words</button>
+      </div>
+      <div class="row">
+        <input id="wordsOut" style="width: 100%" placeholder="words will appear here" readonly />
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Decode</h3>
+      <div class="row">
+        <input id="wordsIn" style="flex: 1" placeholder="enter 4 words" />
+        <button id="decodeBtn">Decode → lat/lon</button>
+      </div>
+      <div class="row">
+        <input id="coordOut" style="width: 100%" placeholder="coordinates will appear here" readonly />
+      </div>
+      <p class="muted">Decoder accepts exact words, unique 4+ letter prefixes, and single-typo corrections when unambiguous.</p>
+    </div>
+
+    <div class="card">
+      <h3>Settings</h3>
+      <div class="row">
+        <label for="langSelect">Geocoding language:</label>
+        <select id="langSelect">
+          <option value="en" selected>English</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="es">Español</option>
+          <option value="it">Italiano</option>
+          <option value="pt">Português</option>
+          <option value="nl">Nederlands</option>
+          <option value="sv">Svenska</option>
+          <option value="pl">Polski</option>
+          <option value="cs">Čeština</option>
+          <option value="ja">日本語</option>
+          <option value="zh">中文</option>
+        </select>
+        <span class="muted">(affects location search only; BIP‑39 words stay English)</span>
+      </div>
+    </div>
+
+    
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
+

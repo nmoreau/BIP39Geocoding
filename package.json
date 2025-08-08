@@ -1,0 +1,44 @@
+{
+  "name": "bip39-geocoding",
+  "version": "0.1.0",
+  "description": "Encode/decode geographic coordinates to/from 4 BIP-39 words using a 44-bit Morton code (22 bits per coord)",
+  "type": "module",
+  "bin": {
+    "b39geo": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "dev:test": "vitest",
+    "cli": "node dist/cli.js",
+    "web:dev": "vite --config web/vite.config.ts web",
+    "web:build": "vite build --config web/vite.config.ts",
+    "web:preview": "vite preview --config web/vite.config.ts --port 5173",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "bip39",
+    "geocode",
+    "geohash",
+    "morton",
+    "z-order",
+    "mnemonic",
+    "four-words",
+    "coordinates"
+  ],
+  "author": "Nicolas",
+  "license": "MIT",
+  "dependencies": {
+    "@scure/bip39": "^1.2.3",
+    "undici": "^6.19.8"
+  },
+  "devDependencies": {
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.19",
+    "vitest": "^2.0.5"
+  }
+}
