@@ -3,7 +3,7 @@
 Encode/decode geographic coordinates using 4 BIP‑39 words. Each axis is quantized to 22 bits, interleaved with Morton Z‑order into a 44‑bit value → 4×11‑bit BIP‑39 indices.
 
 Design inspired by: [ChatGPT Canvas discussion](https://chatgpt.com/canvas/shared/689650f10ac88191a6837e29632502dc).
-
+More details here on my [blog post](https://blog.nmoreau.com/2025/08/08/BIP39-geocoding.html) 
 
 # Product One‑Pager — Four‑Word Geocode (BIP‑39) v1.2
 
